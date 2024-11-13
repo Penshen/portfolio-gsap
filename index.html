@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Julien Boudigues</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top px-5"
+        id="burger"
+      >
+        <div class="container-fluid">
+          <a href="#accueil" class="navbar-brand d-lg-block">
+            <img src="/img/navbar-logo.svg" alt="Icône" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto align-items-center px-5">
+              <li class="nav-item">
+                <a href="#accueil" class="nav-link scroll-to-anchor">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="#competences" class="nav-link mx-3 scroll-to-anchor"
+                  >Compétences</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#portfolio" class="nav-link mx-3 scroll-to-anchor"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link mx-3 scroll-to-anchor"
+                  >Contact</a
+                >
+              </li>
+              <!-- Bouton croix pour fermer en version mobile -->
+              <li class="nav-item d-flex align-items-center">
+                <a
+                  class="nav-link d-block d-lg-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarContent"
+                  aria-label="Close"
+                >
+                  <i class="fas fa-times nav-link__img--bigger"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sections d'ancrage -->
+    <main>
+      <!-- Section Accueil -->
+      <section class="mb-5" id="accueil">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <h1 class="fw-bold fade-in">
+                Je suis Julien Boudigues, Développeur Web
+              </h1>
+              <h2 class="fw-light fs-1 fade-in delay-1">Bienvenue à vous</h2>
+              <p class="fw-light p-3 fs-5 shadow-lg p-2 fade-in delay-2">
+                <strong>Jeune et enthousiaste</strong>, avide de nouveaux défis
+                dont je m’affranchis de par mon adaptabilité et mon insatiable
+                soif de connaissance. Je m’engage à fournir des résultats de
+                <strong>premier ordre.</strong>
+              </p>
+              <button
+                onclick="location.href='#portfolio'"
+                class="fw-bold fs-5 mx-auto my-4 px-4 py-2 rounded d-block btn btn-link link-underline link-underline-opacity-0 fade-in delay-3"
+              >
+                Mes projets
+              </button>
+            </div>
+            <div class="col-12 col-md-6 align-self-center fade-in-left delay-1">
+              <img
+                src="/img/photo-me.svg"
+                alt="Photo de Julien BOUDIGUES"
+                class="w-100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Compétences -->
+      <section class="py-5" id="competences">
+        <div class="container text-center">
+          <h2 class="fs-1 fade-in">Mes Compétences</h2>
+          <h3 class="fw-light fade-in delay-1">
+            Technologies pour le développement web et mobile
+          </h3>
+          <!-- Icônes de compétences avec des effets de zoom -->
+          <div class="row text-center">
+            <div class="col-6 col-md-2 fade-in delay-2">
+              <i class="fab fa-html5 icon html"></i>
+              <p class="tech-name">HTML</p>
+            </div>
+            <div class="col-6 col-md-2 fade-in delay-3">
+              <i class="fab fa-css3-alt icon css"></i>
+              <p class="tech-name">CSS</p>
+            </div>
+            <div class="col-6 col-md-2 fade-in delay-4">
+              <i class="fab fa-js icon js"></i>
+              <p class="tech-name">JavaScript</p>
+            </div>
+            <div class="col-6 col-md-2 fade-in delay-5">
+              <i class="fab fa-bootstrap icon bootstrap"></i>
+              <p class="tech-name">Bootstrap</p>
+            </div>
+            <div class="col-6 col-md-2 fade-in delay-6">
+              <i class="fab fa-git-alt icon git"></i>
+              <p class="tech-name">Git</p>
+            </div>
+            <div class="col-6 col-md-2 fade-in delay-7">
+              <i class="fab fa-figma icon figma"></i>
+              <p class="tech-name">Figma</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Portfolio -->
+      <section class="py-5" id="portfolio">
+        <div class="container text-center fade-in">
+          <h2 class="fs-1 fade-in">Mon portfolio</h2>
+          <h3 class="fw-light mb-4 fade-in delay-1">
+            Projets personnels et professionnels
+          </h3>
+          <!-- Exemples de cartes de projets -->
+          <div class="row">
+            <div class="col-md-4 fade-in delay-2">
+              <div class="card project-card">
+                <img
+                  src="/img/carte1.svg"
+                  class="card-img-top"
+                  alt="Projet 1"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Projet 1</h4>
+                  <p class="card-text">
+                    Description du projet et des technologies utilisées.
+                  </p>
+                  <a href="#" class="btn button">Voir plus</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 fade-in delay-3">
+              <div class="card project-card">
+                <img
+                  src="/img/carte2.png"
+                  class="card-img-top"
+                  alt="Projet 2"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Projet 2</h4>
+                  <p class="card-text">
+                    Description du projet et des technologies utilisées.
+                  </p>
+                  <a href="#" class="btn button">Voir plus</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 fade-in delay-4">
+              <div class="card project-card">
+                <img
+                  src="/img/carte3.png"
+                  class="card-img-top"
+                  alt="Projet 3"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Projet 3</h4>
+                  <p class="card-text">
+                    Description du projet et des technologies utilisées.
+                  </p>
+                  <a href="#" class="btn button">Voir plus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Contact -->
+      <section class="py-5" id="contact">
+        <div class="container text-center fade-in">
+          <h2 class="fade-in">Contactez-moi</h2>
+          <p class="mb-5 fade-in delay-0.1">
+            Vous avez un projet ou des questions ? Envoyez-moi un message !
+          </p>
+          <form class="contact-form p-4">
+            <div class="mb-3 fade-in delay-0.2">
+              <label for="name" class="form-label">Nom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="mb-3 fade-in delay-0.3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="mb-3 fade-in delay-0.4">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn button">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center text-white py-4">
+        <p class="mb-0">© 2024 Julien Boudigues. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript: Bootstrap, GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+        const fadeInLeftElements = document.querySelectorAll(".fade-in-left");
+
+        // Animation pour les éléments avec classe fade-in
+        fadeInElements.forEach((el, index) => {
+          gsap.from(el, {
+            opacity: 0,
+            y: 20,
+            duration: 0.5, // Durée réduite
+            delay: index * 0.15, // Délai réduit
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%", // Déclenche l'animation plus tôt
+            },
+          });
+        });
+
+        // Animation pour les éléments avec classe fade-in-left
+        fadeInLeftElements.forEach((el, index) => {
+          gsap.from(el, {
+            opacity: 0,
+            x: -20,
+            duration: 0.5, // Durée réduite
+            delay: index * 0.15, // Délai réduit
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+            },
+          });
+        });
+
+        // Défilement fluide vers les ancres
+        const links = document.querySelectorAll(".scroll-to-anchor");
+        links.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const target = link.getAttribute("href");
+            gsap.to(window, {
+              duration: 0.8, // Durée du défilement réduite
+              scrollTo: {
+                y: target,
+                offsetY: 100,
+              },
+              ease: "power1.out",
+            });
+          });
+        });
+
+        // Animation de pulsation pour le logo dans la navbar
+        gsap.to(".navbar-brand img", {
+          scale: 1.1,
+          duration: 0.8, // Durée réduite
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+        });
+      });
+    </script>
+  </body>
+</html>

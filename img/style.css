@@ -1,0 +1,23 @@
+/*body {
+  background: linear-gradient(
+    rgba(21, 10, 29, 0.9) 0%,
+    rgba(21, 10, 29, 1) 20%,
+    rgba(21, 10, 29, 1) 80%,
+    rgba(21, 10, 29, 0.94) 100%
+  );
+  height: 100vh;
+  margin: 0;
+}
+  */
+
+.navbar {
+  background-color: #36264c;
+  padding: 1rem;
+}
+.navbar-nav .nav-link {
+  color: #d3e6f5;
+  font-size: 1.2rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #f5c986;
+}
