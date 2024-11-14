@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effet de Particules Suivant la Souris avec GSAP</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #1d1f21;
+        overflow: hidden;
+        position: relative;
+      }
+      .particle {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none; /* Empêche les interactions de la souris */
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      // Fonction pour créer une particule à la position de la souris
+      function createParticle(x, y) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        document.body.appendChild(particle);
+
+        // Positionne la particule initialement là où est la souris
+        gsap.set(particle, {
+          x: x,
+          y: y,
+        });
+
+        // Anime la particule en la dispersant
+        gsap.to(particle, {
+          x: x + gsap.utils.random(-100, 100), // Dispersion autour du point de la souris
+          y: y + gsap.utils.random(-100, 100),
+          opacity: 0,
+          scale: 0,
+          backgroundColor: gsap.utils.random([
+            "#e74c3c",
+            "#3498db",
+            "#f39c12",
+            "#9b59b6",
+          ]),
+          duration: gsap.utils.random(0.5, 1.5),
+          ease: "power3.out",
+          onComplete: () => particle.remove(),
+        });
+      }
+
+      // Écoute les mouvements de la souris et crée une particule à chaque déplacement
+      document.addEventListener("mousemove", (event) => {
+        createParticle(event.clientX, event.clientY);
+      });
+    </script>
+  </body>
+</html>
